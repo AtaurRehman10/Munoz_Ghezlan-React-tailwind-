@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "src/routes/DashboardRev.jsx",
+      "label": "DashboardRev",
+      "routes": [
+        "/dashboard"
+      ]
+    },
+    {
+      "id": "src/routes/Applications.jsx",
+      "label": "Applications",
+      "routes": [
+        "/applications"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "src/routes/DashboardRev.jsx:10:4-to-src/routes/Applications.jsx",
+      "source": "src/routes/DashboardRev.jsx",
+      "target": "src/routes/Applications.jsx",
+      "data": {
+        "viaRoute": "/applications",
+        "trigger": {
+          "element": "navigate(\"/applications\")",
+          "line": 10,
+          "endLine": 10,
+          "column": 4,
+          "endColumn": 29,
+          "sourceFile": "src/routes/DashboardRev.jsx"
+        }
+      }
+    },
+    {
+      "id": "src/routes/Applications.jsx:11:4-to-src/routes/DashboardRev.jsx",
+      "source": "src/routes/Applications.jsx",
+      "target": "src/routes/DashboardRev.jsx",
+      "data": {
+        "viaRoute": "/dashboard",
+        "trigger": {
+          "element": "navigate(\"/dashboard\")",
+          "line": 11,
+          "endLine": 11,
+          "column": 4,
+          "endColumn": 26,
+          "sourceFile": "src/routes/Applications.jsx"
+        }
+      }
+    }
+  ]
+}
