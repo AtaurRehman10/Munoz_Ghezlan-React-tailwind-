@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TimelineImg from '../asstes/Timeline.png';
 import { Search, Bell, FileText, CheckCircle, DollarSign, Clock, User, Menu, X } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
+import { Timeline } from '../component/Timeline';
 
 const DashboardRev = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -90,14 +91,8 @@ const DashboardRev = () => {
           Good Morning, <span className="font-bold">Margarita</span>
         </h1>
 
-        {/* Process Flow Chart - Hidden on Mobile, Shown on Desktop */}
-        <div className="mb-8">
-          <img 
-            src={TimelineImg} 
-            alt="Process Flow Chart" 
-            className="w-full h-auto object-contain max-h-40 sm:max-h-60 md:max-h-80 lg:max-h-[400px] rounded-lg shadow-md" 
-          />
-        </div>
+        
+        < Timeline />
 
         {/* Stats Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-6 sm:mb-8">

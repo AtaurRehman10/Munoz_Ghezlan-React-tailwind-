@@ -17,15 +17,15 @@
   ],
   "edges": [
     {
-      "id": "src/routes/DashboardRev.jsx:10:4-to-src/routes/Applications.jsx",
+      "id": "src/routes/DashboardRev.jsx:11:4-to-src/routes/Applications.jsx",
       "source": "src/routes/DashboardRev.jsx",
       "target": "src/routes/Applications.jsx",
       "data": {
         "viaRoute": "/applications",
         "trigger": {
           "element": "navigate(\"/applications\")",
-          "line": 10,
-          "endLine": 10,
+          "line": 11,
+          "endLine": 11,
           "column": 4,
           "endColumn": 29,
           "sourceFile": "src/routes/DashboardRev.jsx"
