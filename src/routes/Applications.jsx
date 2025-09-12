@@ -11,6 +11,10 @@ const LoanApplicationsDashboard = () => {
     navigate("/dashboard");
   };
 
+  const handleSupport = () => {
+    navigate("/support");
+  };
+
   const applications = [
     {
       id: 1,
@@ -93,8 +97,8 @@ const LoanApplicationsDashboard = () => {
   };
 
   return (
-
     <div className="bg-[url('https://c.animaapp.com/meu8kae0jVrFXq/img/bg.png')] bg-cover bg-center bg-no-repeat text-white w-full min-h-screen">
+      
       {/* Header */}
       <div className="border-b border-gray-700 py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,7 +122,13 @@ const LoanApplicationsDashboard = () => {
                   Dashboard
                 </button>
                 <button className="text-white px-3 py-2 text-sm font-medium border-b-2 border-yellow-600">
-                  My Applications
+                  Applications
+                </button>
+                <button 
+                  onClick={handleSupport}
+                  className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
+                >
+                  Tranchi
                 </button>
               </div>
 
@@ -158,7 +168,16 @@ const LoanApplicationsDashboard = () => {
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-white px-3 py-2 text-sm font-medium text-left border-l-2 border-yellow-600"
                 >
-                  My Applications
+                  Applications
+                </button>
+                <button 
+                  onClick={() => {
+                    handleSupport();
+                    setMobileMenuOpen(false);
+                  }}
+                  className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium text-left transition-colors"
+                >
+                  Support
                 </button>
               </div>
             </div>
@@ -185,15 +204,13 @@ const LoanApplicationsDashboard = () => {
                 <option>Status</option>
                 <option>Lender</option>
               </select>
-              <ChevronDown className=" bg-[#45454580]w-4 h-4 absolute right-2 top-3 text-gray-400 pointer-events-none" />
+              <ChevronDown className="w-4 h-4 absolute right-2 top-3 text-gray-400 pointer-events-none" />
             </div>
           </div>
         </div>
 
         {/* Applications Table Container with Horizontal Scroll */}
         <div className="bg-[#45454580] backdrop-blur-sm rounded-lg overflow-hidden">
-          {/* Mobile: Show scroll indicator */}
-        
           {/* Horizontal Scrollable Table */}
           <div className="overflow-x-auto">
             <div className="min-w-[800px]"> {/* Minimum width to prevent cramping */}
@@ -232,8 +249,6 @@ const LoanApplicationsDashboard = () => {
             </div>
           </div>
         </div>
-
-     
 
         {/* Footer */}
         <div className="mt-8 sm:mt-12 text-center">
