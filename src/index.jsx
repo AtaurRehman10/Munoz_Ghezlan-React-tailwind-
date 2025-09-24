@@ -4,6 +4,7 @@
   import { DashboardRev } from "./routes/DashboardRev";
   import LoanApplicationsDashboard from "./routes/Applications";
   import Support from "./routes/Support";
+  import LoanCalculator from "./routes/LoanCalculator";
   import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
   createRoot(document.getElementById("app")).render(
@@ -13,6 +14,7 @@
           <Route path="/" element={<LogIn />} />
           <Route path="/dashboard" element={<DashboardRev />} />
           <Route path="/applications" element={<LoanApplicationsDashboard />} />
+          <Route path="/calculator" element={<LoanCalculator />} />
           <Route path="/support" element={<Support />} />
         </Routes>
       </Router>

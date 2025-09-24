@@ -11,6 +11,9 @@ const DashboardRev = () => {
   const handleNext = () => {
     navigate("/applications");
   };
+   const handleCalculator = () => {
+    navigate("/calculator");
+  };
 
   const handleSupport = () => {
     navigate("/support");
@@ -20,90 +23,100 @@ const DashboardRev = () => {
     <div className="min-h-screen bg-[url('https://c.animaapp.com/meu8kae0jVrFXq/img/bg.png')] bg-cover bg-no-repeat bg-center text-white">
       
       {/* Header */}
-      <div className="border-b border-gray-700 py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo and Mobile Menu Button */}
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <img 
-                  src="https://c.animaapp.com/meur8v47FVLTqq/img/67709f63669fc8c6f01fff47-group-25-1.png" 
-                  alt="Munoz Ghezlan Capital" 
-                  className="h-8 w-auto"
-                />
-              </div>
-              
-              {/* Desktop Navigation */}
-              <div className="hidden md:flex ml-10 items-baseline space-x-8">
-                <button className="text-white px-3 py-2 text-sm font-medium border-b-2 border-yellow-600">
-                  Dashboard
-                </button>
-                <button 
-                  onClick={handleNext} 
-                  className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
-                >
-                  Applications
-                </button>
-                <button 
-                  onClick={handleSupport}
-                  className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
-                >
-                  Tranchi
-                </button>
-              </div>
-
-              {/* Mobile Menu Button */}
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden ml-4 p-2 rounded-md text-gray-400 hover:text-white focus:outline-none"
-              >
-                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-              </button>
-            </div>
-
-            {/* Right side icons */}
-            <div className="flex items-center space-x-2 sm:space-x-4">
-              <Search className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
-              <Bell className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
-              <div className="w-8 h-8 bg-[#BF9A68] rounded-full flex items-center justify-center cursor-pointer">
-                <span className="text-sm font-semibold text-black">MV</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile Navigation Menu */}
-          {mobileMenuOpen && (
-            <div className="md:hidden border-t border-gray-700 pt-4 pb-2">
-              <div className="flex flex-col space-y-2">
-                <button 
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-white px-3 py-2 text-sm font-medium text-left border-l-2 border-yellow-600"
-                >
-                  Dashboard
-                </button>
-                <button 
-                  onClick={() => {
-                    handleNext();
-                    setMobileMenuOpen(false);
-                  }}
-                  className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium text-left transition-colors"
-                >
-                  Applications
-                </button>
-                <button 
-                  onClick={() => {
-                    handleSupport();
-                    setMobileMenuOpen(false);
-                  }}
-                  className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium text-left transition-colors"
-                >
-                  Tranchi
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
+           <div className="border-b border-gray-700 py-2">
+             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div className="flex items-center justify-between h-16">
+                 {/* Logo and Mobile Menu Button */}
+                 <div className="flex items-center">
+                   <div className="flex-shrink-0">
+                     <img
+                       src="https://c.animaapp.com/meur8v47FVLTqq/img/67709f63669fc8c6f01fff47-group-25-1.png"
+                       alt="Munoz Ghezlan Capital"
+                       className="h-8 w-auto"
+                     />
+                   </div>
+     
+                   {/* Desktop Navigation */}
+                   <div className="hidden md:flex ml-10 items-baseline space-x-8">
+                     <button className="text-white px-3 py-2 text-sm font-medium transition-colors border-yellow-600 border-b-2"
+                     >
+                       
+                       Dashboard
+                     </button>
+                     <button
+                       onClick={handleNext}
+                       className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
+                     >
+                       Applications
+                     </button>
+                     <button className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
+                     onClick={handleCalculator}>
+                       Loan Calculator
+                     </button>
+                     <button
+                       onClick={handleSupport}
+                       className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
+                     >
+                       Tranchi
+                     </button>
+                   </div>
+     
+                   {/* Mobile Menu Button */}
+                   <button
+                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                     className="md:hidden ml-4 p-2 rounded-md text-gray-400 hover:text-white focus:outline-none"
+                   >
+                     {mobileMenuOpen ? (
+                       <X className="w-5 h-5" />
+                     ) : (
+                       <Menu className="w-5 h-5" />
+                     )}
+                   </button>
+                 </div>
+     
+                 {/* Right side icons */}
+                 <div className="flex items-center space-x-2 sm:space-x-4">
+                   <Search className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+                   <Bell className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+                   <div className="w-8 h-8 bg-[#BF9A68] rounded-full flex items-center justify-center cursor-pointer">
+                     <span className="text-sm font-semibold text-black">MV</span>
+                   </div>
+                 </div>
+               </div>
+     
+               {/* Mobile Navigation Menu */}
+               {mobileMenuOpen && (
+                 <div className="md:hidden border-t border-gray-700 pt-4 pb-2">
+                   <div className="flex flex-col space-y-2">
+                     <button
+                       onClick={() => setMobileMenuOpen(false)}
+                       className="text-white px-3 py-2 text-sm font-medium text-left border-l-2 border-yellow-600"
+                     >
+                       Dashboard
+                     </button>
+                     <button
+                       onClick={() => {
+                         handleNext();
+                         setMobileMenuOpen(false);
+                       }}
+                       className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium text-left transition-colors"
+                     >
+                       Applications
+                     </button>
+                     <button
+                       onClick={() => {
+                         handleSupport();
+                         setMobileMenuOpen(false);
+                       }}
+                       className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium text-left transition-colors"
+                     >
+                       Tranchi
+                     </button>
+                   </div>
+                 </div>
+               )}
+             </div>
+           </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Welcome Message */}

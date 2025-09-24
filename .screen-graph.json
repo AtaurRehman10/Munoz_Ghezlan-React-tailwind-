@@ -13,21 +13,67 @@
       "routes": [
         "/applications"
       ]
+    },
+    {
+      "id": "src/routes/LoanCalculator.jsx",
+      "label": "LoanCalculator",
+      "routes": [
+        "/calculator"
+      ]
+    },
+    {
+      "id": "src/routes/Support.jsx",
+      "label": "Support",
+      "routes": [
+        "/support"
+      ]
     }
   ],
   "edges": [
     {
-      "id": "src/routes/DashboardRev.jsx:11:4-to-src/routes/Applications.jsx",
+      "id": "src/routes/DashboardRev.jsx:12:4-to-src/routes/Applications.jsx",
       "source": "src/routes/DashboardRev.jsx",
       "target": "src/routes/Applications.jsx",
       "data": {
         "viaRoute": "/applications",
         "trigger": {
           "element": "navigate(\"/applications\")",
-          "line": 11,
-          "endLine": 11,
+          "line": 12,
+          "endLine": 12,
           "column": 4,
           "endColumn": 29,
+          "sourceFile": "src/routes/DashboardRev.jsx"
+        }
+      }
+    },
+    {
+      "id": "src/routes/DashboardRev.jsx:15:4-to-src/routes/LoanCalculator.jsx",
+      "source": "src/routes/DashboardRev.jsx",
+      "target": "src/routes/LoanCalculator.jsx",
+      "data": {
+        "viaRoute": "/calculator",
+        "trigger": {
+          "element": "navigate(\"/calculator\")",
+          "line": 15,
+          "endLine": 15,
+          "column": 4,
+          "endColumn": 27,
+          "sourceFile": "src/routes/DashboardRev.jsx"
+        }
+      }
+    },
+    {
+      "id": "src/routes/DashboardRev.jsx:19:4-to-src/routes/Support.jsx",
+      "source": "src/routes/DashboardRev.jsx",
+      "target": "src/routes/Support.jsx",
+      "data": {
+        "viaRoute": "/support",
+        "trigger": {
+          "element": "navigate(\"/support\")",
+          "line": 19,
+          "endLine": 19,
+          "column": 4,
+          "endColumn": 24,
           "sourceFile": "src/routes/DashboardRev.jsx"
         }
       }
@@ -45,6 +91,134 @@
           "column": 4,
           "endColumn": 26,
           "sourceFile": "src/routes/Applications.jsx"
+        }
+      }
+    },
+    {
+      "id": "src/routes/Applications.jsx:15:4-to-src/routes/Support.jsx",
+      "source": "src/routes/Applications.jsx",
+      "target": "src/routes/Support.jsx",
+      "data": {
+        "viaRoute": "/support",
+        "trigger": {
+          "element": "navigate(\"/support\")",
+          "line": 15,
+          "endLine": 15,
+          "column": 4,
+          "endColumn": 24,
+          "sourceFile": "src/routes/Applications.jsx"
+        }
+      }
+    },
+    {
+      "id": "src/routes/Applications.jsx:19:4-to-src/routes/LoanCalculator.jsx",
+      "source": "src/routes/Applications.jsx",
+      "target": "src/routes/LoanCalculator.jsx",
+      "data": {
+        "viaRoute": "/calculator",
+        "trigger": {
+          "element": "navigate(\"/calculator\")",
+          "line": 19,
+          "endLine": 19,
+          "column": 4,
+          "endColumn": 27,
+          "sourceFile": "src/routes/Applications.jsx"
+        }
+      }
+    },
+    {
+      "id": "src/routes/LoanCalculator.jsx:49:4-to-src/routes/Applications.jsx",
+      "source": "src/routes/LoanCalculator.jsx",
+      "target": "src/routes/Applications.jsx",
+      "data": {
+        "viaRoute": "/applications",
+        "trigger": {
+          "element": "navigate(\"/applications\")",
+          "line": 49,
+          "endLine": 49,
+          "column": 4,
+          "endColumn": 29,
+          "sourceFile": "src/routes/LoanCalculator.jsx"
+        }
+      }
+    },
+    {
+      "id": "src/routes/LoanCalculator.jsx:53:4-to-src/routes/DashboardRev.jsx",
+      "source": "src/routes/LoanCalculator.jsx",
+      "target": "src/routes/DashboardRev.jsx",
+      "data": {
+        "viaRoute": "/dashboard",
+        "trigger": {
+          "element": "navigate(\"/dashboard\")",
+          "line": 53,
+          "endLine": 53,
+          "column": 4,
+          "endColumn": 26,
+          "sourceFile": "src/routes/LoanCalculator.jsx"
+        }
+      }
+    },
+    {
+      "id": "src/routes/LoanCalculator.jsx:57:4-to-src/routes/Support.jsx",
+      "source": "src/routes/LoanCalculator.jsx",
+      "target": "src/routes/Support.jsx",
+      "data": {
+        "viaRoute": "/support",
+        "trigger": {
+          "element": "navigate(\"/support\")",
+          "line": 57,
+          "endLine": 57,
+          "column": 4,
+          "endColumn": 24,
+          "sourceFile": "src/routes/LoanCalculator.jsx"
+        }
+      }
+    },
+    {
+      "id": "src/routes/Support.jsx:49:4-to-src/routes/DashboardRev.jsx",
+      "source": "src/routes/Support.jsx",
+      "target": "src/routes/DashboardRev.jsx",
+      "data": {
+        "viaRoute": "/dashboard",
+        "trigger": {
+          "element": "navigate(\"/dashboard\")",
+          "line": 49,
+          "endLine": 49,
+          "column": 4,
+          "endColumn": 26,
+          "sourceFile": "src/routes/Support.jsx"
+        }
+      }
+    },
+    {
+      "id": "src/routes/Support.jsx:53:4-to-src/routes/Applications.jsx",
+      "source": "src/routes/Support.jsx",
+      "target": "src/routes/Applications.jsx",
+      "data": {
+        "viaRoute": "/applications",
+        "trigger": {
+          "element": "navigate(\"/applications\")",
+          "line": 53,
+          "endLine": 53,
+          "column": 4,
+          "endColumn": 29,
+          "sourceFile": "src/routes/Support.jsx"
+        }
+      }
+    },
+    {
+      "id": "src/routes/Support.jsx:57:4-to-src/routes/LoanCalculator.jsx",
+      "source": "src/routes/Support.jsx",
+      "target": "src/routes/LoanCalculator.jsx",
+      "data": {
+        "viaRoute": "/calculator",
+        "trigger": {
+          "element": "navigate(\"/calculator\")",
+          "line": 57,
+          "endLine": 57,
+          "column": 4,
+          "endColumn": 27,
+          "sourceFile": "src/routes/Support.jsx"
         }
       }
     }
